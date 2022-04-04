@@ -1,0 +1,13 @@
+{
+  "name": "geolocation-ip-server",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
+  "dependencies": {
+    "@maxmind/geoip2-node": "^3.4.0",
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
