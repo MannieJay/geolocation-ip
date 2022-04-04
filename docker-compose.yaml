@@ -1,0 +1,25 @@
+version: '4.6.1'
+
+services: 
+  server:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    ports:
+      - $SERVER_LOCAL_PORT:$SERVER_DOCKER_PORT
+    volumes: 
+      - .:/app/
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - $UI_LOCAL_PORT:$UI_DOCKER_PORT
+    volumes: 
+      - .:/app/
+      - /app/node_modules
+    stdin_open: true
+    tty: true

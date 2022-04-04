@@ -1,12 +1,13 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this application ensure Docker is installed and configured.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3000:3000 -e CHOKIDAR_USEPOLLING=true  geolocation-ip:dev`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
